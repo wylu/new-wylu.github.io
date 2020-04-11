@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wylu.me/"/>
-  <updated>2020-04-04T09:12:01.819Z</updated>
+  <updated>2020-04-11T15:29:56.742Z</updated>
   <id>https://wylu.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>博客迁移通知</title>
+    <link href="https://wylu.me/posts/1cf8eb09/"/>
+    <id>https://wylu.me/posts/1cf8eb09/</id>
+    <published>2020-04-11T15:03:12.000Z</published>
+    <updated>2020-04-11T15:29:56.742Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>温馨提示：现在博客已经迁移到 <a href="https://wylu.me">https://wylu.me</a>，欢迎各位继续关注我的博客。</strong></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;温馨提示：现在博客已经迁移到 &lt;a href=&quot;https://wylu.me&quot;&gt;https://wylu.me&lt;/a&gt;，欢迎各位继续关注我的博客。&lt;/strong&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Nginx configuration for CodeIgniter</title>
@@ -94,32 +116,6 @@
       <category term="MongoDB" scheme="https://wylu.me/tags/MongoDB/"/>
     
       <category term="Replica Set" scheme="https://wylu.me/tags/Replica-Set/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo NexT主题博客接入谷歌广告</title>
-    <link href="https://wylu.me/posts/9d582ac3/"/>
-    <id>https://wylu.me/posts/9d582ac3/</id>
-    <published>2020-03-29T02:15:47.000Z</published>
-    <updated>2020-03-29T04:40:52.903Z</updated>
-    
-    <content type="html"><![CDATA[<p>本文将向你展示 Hexo + NexT 主题博客如何接入 Google 广告联盟 Google Adsense</p><a id="more"></a><h1 id="前提">前提</h1><ul><li>使用 Hexo 和 NexT 主题搭建博客</li><li>能翻墙，可以登录 Google Adsense 网站</li></ul><h1 id="注册账号">注册账号</h1><p><a href="https://www.google.com/adsense/" rel="external nofollow noopener noreferrer" target="_blank">Google Adsense</a></p><h1 id="将网站关联到-adsense">将网站关联到 AdSense</h1><p>注册成功后，将 Google 提供的 AdSense 代码粘贴到你站点的 HTML 中，放置在 <code>&lt;head&gt;</code> 和 <code>&lt;/head&gt;</code> 标记之间。</p><p>完成后，请选择相应复选框并点击"完成"，然后等待 Google 对你的网站进行核查和验收。</p><p>使用 Hexo + NexT 搭建的博客站点，只要将 Google 提供的 AdSense 代码添加到 <code>/themes/next/layout/_partials/head/head.swig</code> 文件末尾即可：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script data-ad-client=<span class="string">"ca-pub-5699403938610067"</span> <span class="keyword">async</span> src=<span class="string">"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure><p>修改后，重新生成页面查看源码，先自行验证是否成功添加了 AdSense 的代码，若确认添加成功后，再在 Google AdSense 上点击确认，开始验证，一般没问题的话几分钟就会出结果，有问题的话要等待一段时间。</p><h1 id="配置广告位">配置广告位</h1><p>待通过审核之后，就可以开始考虑在自己的网站上进行广告位置的筛选和设计了，目前 Google AdSense 主要提供了自动广告和广告单元两种形式的广告添加方式。</p><h2 id="自动广告">自动广告</h2><p>自动广告是 Google AdSense 近来提供的一种广告形式，它能够通过分析你的博客布局结构，自定义的在你的网站中插入合适的广告，无论是内容，还是广告尺寸，都是完全契合网站内容本身的，算是一种比较高质量的广告。具体的代码插入方法，其实就是上述的用来检验的代码，一旦上述代码审核通过，其实已经自动接入了 Google AdSense 的自动广告。</p><h2 id="广告单元">广告单元</h2><p>为了能够最高效的利用博客站点的广告位，AdSense 还提供了三种固定广告位</p><ul><li>文字广告和展示广告(插入在侧边栏，评论区之类的固定广告位)</li><li>信息流广告(插入在信息流内容的广告位)</li><li>文章内嵌广告(插入在每篇文章内部的开始，中间，结尾部分)</li></ul><p>由于是博客网站，所以第二种信息流广告没有投入使用，这里主要使用了第一种和第三种。这里，提供几种针对 Hexo NexT 主题广告代码插入位置的操作:</p><h3 id="创建-google-adsense.swig">创建 google-adsense.swig</h3><p>首先在 <code>themes/next/layout/_custom</code> 目录下，新建 google-adsense.swig 文件，并将 AdSense 代码插入其中。</p><p>在需要展示广告的位置插入如下代码：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; partial(&apos;_custom/google-adsense.swig&apos;) &#125;&#125;</span><br></pre></td></tr></table></figure><h3 id="插入评论区">插入评论区</h3><p>将下列代码插入 <code>themes/next/layout/_partials/comments.swig</code> 文件末尾即可：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; partial(&apos;_custom/google-adsense.swig&apos;) &#125;&#125;</span><br></pre></td></tr></table></figure><h3 id="插入侧边栏">插入侧边栏</h3><p>将下列代码插入 <code>themes/next/layout/_macro/sidebar.swig</code> 文件中 <code>&lt;div class=”sidebar-inner”&gt;&lt;/div&gt;</code> 的最下侧即可：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; partial(&apos;_custom/google-adsense.swig&apos;) &#125;&#125;</span><br></pre></td></tr></table></figure><p>如：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"sidebar-inner"</span>&gt;</span></span><br><span class="line">  ...</span><br><span class="line">  &#123;&#123; partial('_custom/google-adsense.swig') &#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><h3 id="插入文章中">插入文章中</h3><p>编辑 <code>themes/next/layout/_macro/post.swig</code> 文件，将下面的 include 语句添加到 post body 中：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; partial(&apos;_custom/google-adsense.swig&apos;) &#125;&#125;</span><br></pre></td></tr></table></figure><p>如：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#123;#################&#125;</span><br><span class="line">&#123;### POST BODY ###&#125;</span><br><span class="line">&#123;#################&#125;</span><br><span class="line">&lt;div class=&quot;post-body&#123;%- if post.direction and post.direction.toLowerCase() === &apos;rtl&apos; %&#125; rtl&#123;%- endif %&#125;&quot; itemprop=&quot;articleBody&quot;&gt;</span><br><span class="line">  ...</span><br><span class="line">  &#123;%- if is_index %&#125;</span><br><span class="line">    ...</span><br><span class="line">    &#123;% else %&#125;</span><br><span class="line">      &#123;&#123; post.content &#125;&#125;</span><br><span class="line">    &#123;%- endif %&#125;</span><br><span class="line">  &#123;% else %&#125;</span><br><span class="line">    &#123;&#123; partial(&apos;_custom/google-adsense.swig&apos;) &#125;&#125;</span><br><span class="line">    &#123;&#123; post.content &#125;&#125;</span><br><span class="line">  &#123;%- endif %&#125;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&#123;#####################&#125;</span><br><span class="line">&#123;### END POST BODY ###&#125;</span><br><span class="line">&#123;#####################&#125;</span><br></pre></td></tr></table></figure><h1 id="注意事项">注意事项</h1><p>在成功接入 AdSense 广告之后，并不算结束，Google 会根据几种方式和数据判断广告点击是否作弊，从而注销你的账号。</p><ul><li>作弊广告点击者的 IP 地址与你 Adsense 账户登录 IP 地址相同</li><li>作弊广告点击的 CTR 数据太高</li><li>作弊广告点击者的 IP 地址来自同一个地理区域</li><li>根据 Cookies 判断作弊 Adsense 广告点击</li><li>作弊广告点击者页面停留时间太短</li><li>直接访问者的广告点击率过高</li><li>流量小但广告点击率高</li><li>在网页上用文字提示请求鼓动点击广告</li></ul><h1 id="references">References</h1><p><a href="https://darylliu.github.io/archives/6a1f6623.html" rel="external nofollow noopener noreferrer" target="_blank">https://darylliu.github.io/archives/6a1f6623.html</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本文将向你展示 Hexo + NexT 主题博客如何接入 Google 广告联盟 Google Adsense&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Tool" scheme="https://wylu.me/categories/Tool/"/>
-    
-      <category term="Hexo" scheme="https://wylu.me/categories/Tool/Hexo/"/>
-    
-    
-      <category term="Hexo" scheme="https://wylu.me/tags/Hexo/"/>
-    
-      <category term="NexT" scheme="https://wylu.me/tags/NexT/"/>
     
   </entry>
   

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wylu.me/"/>
-  <updated>2020-04-11T15:29:56.742Z</updated>
+  <updated>2020-04-13T14:23:49.147Z</updated>
   <id>https://wylu.me/</id>
   
   <author>
@@ -21,16 +21,16 @@
     <link href="https://wylu.me/posts/1cf8eb09/"/>
     <id>https://wylu.me/posts/1cf8eb09/</id>
     <published>2020-04-11T15:03:12.000Z</published>
-    <updated>2020-04-11T15:29:56.742Z</updated>
+    <updated>2020-04-13T14:23:49.147Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>温馨提示：现在博客已经迁移到 <a href="https://wylu.me">https://wylu.me</a>，欢迎各位继续关注我的博客。</strong></p>]]></content>
+    <content type="html"><![CDATA[<div class="note warning">            <h3 id="温馨提示">温馨提示</h3><p><strong>现在博客已经迁移到 <a href="https://wylu.me">https://wylu.me</a>，欢迎各位继续关注我的博客。</strong></p>          </div>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;strong&gt;温馨提示：现在博客已经迁移到 &lt;a href=&quot;https://wylu.me&quot;&gt;https://wylu.me&lt;/a&gt;，欢迎各位继续关注我的博客。&lt;/strong&gt;&lt;/p&gt;
-
+        &lt;div class=&quot;note warning&quot;&gt;
+            &lt;h3 id=&quot;温馨提示&quot;&gt;温馨提示&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;现在博客已经迁移到 &lt;a href=&quot;https://wylu.me&quot;&gt;https://wylu.me&lt;/a&gt;，欢迎各位继续关注我的博
       
     
     </summary>

@@ -60,14 +60,14 @@
 <meta property="og:site_name" content="wylu">
 <meta property="og:description" content="CGI、FastCGI、WSGI、uwsgi、uWSGI 的联系与区别。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/Language/Python/CGI-FastCGI-WSGI-uwsgi-uWSGI/CGI.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/Language/Python/CGI-FastCGI-WSGI-uwsgi-uWSGI/Web服务器与CGI程序的交互.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/Language/Python/CGI-FastCGI-WSGI-uwsgi-uWSGI/这些名词的关系.png">
-<meta property="og:updated_time" content="2020-04-04T09:09:07.133Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/Language/python/CGI-FastCGI-WSGI-uwsgi-uWSGI/CGI.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/Language/python/CGI-FastCGI-WSGI-uwsgi-uWSGI/Web服务器与CGI程序的交互.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/Language/python/CGI-FastCGI-WSGI-uwsgi-uWSGI/这些名词的关系.png">
+<meta property="og:updated_time" content="2020-04-18T06:10:32.843Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CGI、FastCGI、WSGI、uwsgi、uWSGI">
 <meta name="twitter:description" content="CGI、FastCGI、WSGI、uwsgi、uWSGI 的联系与区别。">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/Language/Python/CGI-FastCGI-WSGI-uwsgi-uWSGI/CGI.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/Language/python/CGI-FastCGI-WSGI-uwsgi-uWSGI/CGI.png">
 
 <link rel="canonical" href="https://wylu.me/posts/60a486d8/">
 
@@ -263,7 +263,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-04 17:09:07" itemprop="dateModified" datetime="2020-04-04T17:09:07+08:00">2020-04-04</time>
+                <time title="修改时间：2020-04-18 14:10:32" itemprop="dateModified" datetime="2020-04-18T14:10:32+08:00">2020-04-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -323,10 +323,10 @@
 <blockquote>
 <p>最早的 Web 服务器简单地响应浏览器发来的 HTTP 请求，并将存储在服务器上的 HTML 文件返回给浏览器，也就是静态 html。随着不断地发展，网站也越来越复杂，所以出现动态技术。但是服务器并不能直接运行 php，asp 这样的文件，自己不能做，外包给别人吧，但是要与第三做个约定，我给你什么，然后你给我什么，就是我把请求参数发送给你，然后我接收你的处理结果给客户端。那这个约定就是 common gateway interface，简称 cgi。这个协议可以用 vb，c，php，python 来实现。cgi 只是接口协议，根本不是什么语言。</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/Language/Python/CGI-FastCGI-WSGI-uwsgi-uWSGI/CGI.png" alt="CGI"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/Language/python/CGI-FastCGI-WSGI-uwsgi-uWSGI/CGI.png" alt="CGI"></p>
 <h2 id="web-服务器与-cgi-程序的交互">Web 服务器与 CGI 程序的交互</h2>
 <p>WEB 服务器将根据 CGI 程序的类型决定向 CGI 程序的传送数据的方式，一般是通过标准输入/输出流和环境变量来与 CGI 程序间传递数据。如下图所示：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/Language/Python/CGI-FastCGI-WSGI-uwsgi-uWSGI/Web服务器与CGI程序的交互.png" alt="Web服务器与CGI程序的交互"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/Language/python/CGI-FastCGI-WSGI-uwsgi-uWSGI/Web服务器与CGI程序的交互.png" alt="Web服务器与CGI程序的交互"></p>
 <p>CGI 程序通过标准输入（STDIN）和标准输出（STDOUT）来进行输入输出。此外 CGI 程序还通过环境变量来得到输入，操作系统提供了许多环境变量，它们定义了程序的执行环境，应用程序可以存取它们。Web 服务器和 CGI 接口又另外设置了一些环境变量，用来向 CGI 程序传递一些重要的参数。</p>
 <p>常用 CGI 环境变量：</p>
 <table>
@@ -438,7 +438,7 @@
 <li>uWSGI 做为后端服务器：负责接收 Nginx 转发的请求并处理后发给 Django 应用以及接收 Django 应用返回信息转发给 Nginx。</li>
 <li>Django 应用收到请求后处理数据并渲染相应的返回页面给 uWSGI 服务器。</li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/Language/Python/CGI-FastCGI-WSGI-uwsgi-uWSGI/这些名词的关系.png" alt="这些名词的关系"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/Language/python/CGI-FastCGI-WSGI-uwsgi-uWSGI/这些名词的关系.png" alt="这些名词的关系"></p>
 <h1 id="有-uwgsi-了-django-为什么还需要-nginx">有 uWGSI 了 Django 为什么还需要 Nginx</h1>
 <p>Nginx 是一个 HTTP 和反向代理服务器</p>
 <ul>

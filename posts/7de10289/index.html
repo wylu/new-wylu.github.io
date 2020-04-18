@@ -58,14 +58,14 @@
 <meta property="og:url" content="https://wylu.me/posts/7de10289/index.html">
 <meta property="og:site_name" content="wylu">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/OS/Linux/Ubuntu下安装拳皇97/kof97.jpeg">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/OS/Linux/Ubuntu下安装拳皇97/mame.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/OS/Linux/Ubuntu下安装拳皇97/download-kof97.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/OS/Linux/Ubuntu下安装拳皇97/run-kof97.png">
-<meta property="og:updated_time" content="2020-02-02T16:35:59.210Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu下安装拳皇97/kof97.jpeg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu下安装拳皇97/mame.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu下安装拳皇97/download-kof97.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu下安装拳皇97/run-kof97.png">
+<meta property="og:updated_time" content="2020-04-18T06:10:32.871Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu下安装拳皇97">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/OS/Linux/Ubuntu下安装拳皇97/kof97.jpeg">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu下安装拳皇97/kof97.jpeg">
 
 <link rel="canonical" href="https://wylu.me/posts/7de10289/">
 
@@ -261,7 +261,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-03 00:35:59" itemprop="dateModified" datetime="2020-02-03T00:35:59+08:00">2020-02-03</time>
+                <time title="修改时间：2020-04-18 14:10:32" itemprop="dateModified" datetime="2020-04-18T14:10:32+08:00">2020-04-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -313,7 +313,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/OS/Linux/Ubuntu下安装拳皇97/kof97.jpeg" alt="kof97"></p>
+        <p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu下安装拳皇97/kof97.jpeg" alt="kof97"></p>
 <a id="more"></a>
 <h1 id="系统环境">系统环境</h1>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> lsb_release -a</span></span><br><span class="line">No LSB modules are available.</span><br><span class="line">Distributor ID:	Ubuntu</span><br><span class="line">Description:	Ubuntu 18.04.3 LTS</span><br><span class="line">Release:	18.04</span><br><span class="line">Codename:	bionic</span><br></pre></td></tr></table></figure>
@@ -323,12 +323,12 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt install mame</span></span><br></pre></td></tr></table></figure>
 <h1 id="测试-mame-是否安装成功">测试 MAME 是否安装成功</h1>
 <p>执行 <code>mame</code> 命令启动模拟器，如果启动后界面如下，说明模拟器安装成功，按 <code>ESC</code> 键可退出程序。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/OS/Linux/Ubuntu下安装拳皇97/mame.png" alt="mame"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu下安装拳皇97/mame.png" alt="mame"></p>
 <h1 id="下载-kof97.zip-rom">下载 kof97.zip rom</h1>
 <p>因为大多数游戏数据都是存储于只读存储器，渐渐地不管这些文件原先是被存储于怎样的介质，读取后的文件都通称为 ROM 映像档或 ROM。在要运行某一特定的游戏时，MAME 就需要这些读取自原始街机的整组文件，这一整组的文件称之为“ROM 集合”，但是碍于法规 MAME 不会自带这些文件。</p>
 <p>所以想要在 MAME 中玩拳皇97还需要下载游戏的 rom 包，MAME 支持的游戏 rom 包可以到 <a href="https://www.planetemu.net/roms/mame-roms" rel="external nofollow noopener noreferrer" target="_blank">https://www.planetemu.net/roms/mame-roms</a> 下载。</p>
 <p>这是拳皇97的 rom：<a href="https://www.planetemu.net/rom/mame-roms/kof97" rel="external nofollow noopener noreferrer" target="_blank">kof97.zip</a></p>
-<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/OS/Linux/Ubuntu下安装拳皇97/download-kof97.png" alt="download-kof97"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu下安装拳皇97/download-kof97.png" alt="download-kof97"></p>
 <p>拳皇97风云再起的 rom: <a href="https://www.planetemu.net/rom/mame-roms/kof97pls" rel="external nofollow noopener noreferrer" target="_blank">kof97pls.zip</a>，该 rom 依赖于 kof97.zip</p>
 <h1 id="下载-neogeo.zip">下载 neogeo.zip</h1>
 <p>neogeo.zip 是玩所有 NEOGEO 公司出品的游戏所必需的 BIOS 文件，需要和其它游戏 ROM 一起放在模拟器的 roms 文件夹下。</p>
@@ -343,7 +343,7 @@
 <h1 id="运行游戏">运行游戏</h1>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mame kof97</span></span><br></pre></td></tr></table></figure>
 <p>执行以上命令即可启动游戏，默认 MAME 运行时是全屏，使用组合键 <code>Alt + Enter</code> 可切换成窗口模式；按 <code>p</code> 键暂停游戏并释放鼠标；按 <code>Tab</code> 键可进行相应的设置，按 <code>Esc</code> 退出 MAME。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/OS/Linux/Ubuntu下安装拳皇97/run-kof97.png" alt="run-kof97"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu下安装拳皇97/run-kof97.png" alt="run-kof97"></p>
 <h1 id="配置视图长宽比aspect-ratio">配置视图长宽比（Aspect Ratio）</h1>
 <p>如果你成功运行了 kof97，并尝试进行设置，你会发现视图的长宽比始终为 4:3，且无法调整，导致整个视图看起来非常窄，为了能够调整长宽比，我查阅了许多资料，后来发现一个帖子，它基本上解决了我遇到的问题：</p>
 <p><a href="http://forum.arcadecontrols.com/index.php?topic=154130.0" rel="external nofollow noopener noreferrer" target="_blank">Correct Aspect Ratio for vertical games on 16:9 screens??</a></p>

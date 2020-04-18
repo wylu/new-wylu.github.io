@@ -60,13 +60,13 @@
 <meta property="og:site_name" content="wylu">
 <meta property="og:description" content="对于互联网应用来说，我们要尽量保证服务的不可间断性，一旦出现故障需要尽快的恢复。MongoDB 的副本集模式主要解决了在其主从模式下故障无法自动转移的情况，自动实现高可用。三个成员副本集提供足够的冗余性，以承受大多数网络分区和其他系统故障，这些集合对于许多分布式读取操作也具有足够的容量。本文介绍如何从三个现有 mongod 实例创建三成员副本集，包括不启用访问控制的和启用访问控制的。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/Web/mongo/MongoDB副本集搭建/replica-set-primary-with-two-secondaries.svg">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/Web/mongo/MongoDB副本集搭建/replica-set-trigger-election.svg">
-<meta property="og:updated_time" content="2020-04-04T08:34:37.434Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/Web/mongo/MongoDB副本集搭建/replica-set-primary-with-two-secondaries.svg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/Web/mongo/MongoDB副本集搭建/replica-set-trigger-election.svg">
+<meta property="og:updated_time" content="2020-04-18T06:10:32.887Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MongoDB副本集搭建">
 <meta name="twitter:description" content="对于互联网应用来说，我们要尽量保证服务的不可间断性，一旦出现故障需要尽快的恢复。MongoDB 的副本集模式主要解决了在其主从模式下故障无法自动转移的情况，自动实现高可用。三个成员副本集提供足够的冗余性，以承受大多数网络分区和其他系统故障，这些集合对于许多分布式读取操作也具有足够的容量。本文介绍如何从三个现有 mongod 实例创建三成员副本集，包括不启用访问控制的和启用访问控制的。">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/Web/mongo/MongoDB副本集搭建/replica-set-primary-with-two-secondaries.svg">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/Web/mongo/MongoDB副本集搭建/replica-set-primary-with-two-secondaries.svg">
 
 <link rel="canonical" href="https://wylu.me/posts/fd4a1d37/">
 
@@ -254,10 +254,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-04-04 14:46:47 / 修改时间：16:34:37" itemprop="dateCreated datePublished" datetime="2020-04-04T14:46:47+08:00">2020-04-04</time>
+              <time title="创建时间：2020-04-04 14:46:47" itemprop="dateCreated datePublished" datetime="2020-04-04T14:46:47+08:00">2020-04-04</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-04-18 14:10:32" itemprop="dateModified" datetime="2020-04-18T14:10:32+08:00">2020-04-18</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -319,9 +325,9 @@
 <li>一个主节点 primary</li>
 <li>两个副节点 secondary （每个副节点都可以被选举为主节点）</li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/Web/mongo/MongoDB副本集搭建/replica-set-primary-with-two-secondaries.svg" alt="P-S-S"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/Web/mongo/MongoDB副本集搭建/replica-set-primary-with-two-secondaries.svg" alt="P-S-S"></p>
 <p>除 primary 成员外，P-S-S 部署始终提供数据集的两个完整副本。这些副本集提供了额外的容错能力和高可用性。 如果主服务器不可用，则副本集将 secondary 成员选为 primary 并继续正常操作。原本的 primary 在可用时会重新加入副本集。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/Web/mongo/MongoDB副本集搭建/replica-set-trigger-election.svg" alt="elect"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/Web/mongo/MongoDB副本集搭建/replica-set-trigger-election.svg" alt="elect"></p>
 <h1 id="环境准备">环境准备</h1>
 <ul>
 <li>系统系统：CentOS7 64位</li>

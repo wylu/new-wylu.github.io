@@ -60,12 +60,12 @@
 <meta property="og:site_name" content="wylu">
 <meta property="og:description" content="本文将介绍一些关于 NexT 侧边栏的配置。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/Tool/Hexo/NexT侧边栏配置/links.png">
-<meta property="og:updated_time" content="2020-01-12T09:44:48.653Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/Tool/Hexo/NexT侧边栏配置/links.png">
+<meta property="og:updated_time" content="2020-04-18T06:10:32.851Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NexT侧边栏配置">
 <meta name="twitter:description" content="本文将介绍一些关于 NexT 侧边栏的配置。">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/Tool/Hexo/NexT侧边栏配置/links.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/Tool/Hexo/NexT侧边栏配置/links.png">
 
 <link rel="canonical" href="https://wylu.me/posts/a2725fd8/">
 
@@ -261,7 +261,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-01-12 17:44:48" itemprop="dateModified" datetime="2020-01-12T17:44:48+08:00">2020-01-12</time>
+                <time title="修改时间：2020-04-18 14:10:32" itemprop="dateModified" datetime="2020-04-18T14:10:32+08:00">2020-04-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -338,7 +338,7 @@
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Blog rolls</span></span><br><span class="line"><span class="comment"># NexT默认会在links_title之前显示链接图标，你可以使用FontAwesome的其它图标</span></span><br><span class="line"><span class="attr">links_icon:</span> <span class="string">link</span></span><br><span class="line"><span class="comment"># NexT默认使用Links作为blogroll的名称，你可以自行修改</span></span><br><span class="line"><span class="attr">links_title:</span> <span class="string">Links</span></span><br><span class="line"><span class="comment"># NexT默认所有blogrolls都以块显示，你可以改为内联</span></span><br><span class="line"><span class="attr">links_layout:</span> <span class="string">block</span></span><br><span class="line"><span class="comment">#links_layout: inline</span></span><br><span class="line"><span class="attr">links:</span></span><br><span class="line">  <span class="comment"># 此处添加你的友情链接</span></span><br><span class="line">  <span class="comment">#Title: http://example.com</span></span><br></pre></td></tr></table></figure>
 <p>例如：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">links_icon:</span> <span class="string">link</span></span><br><span class="line"><span class="attr">links_title:</span> <span class="string">福利链接</span></span><br><span class="line"><span class="attr">links_layout:</span> <span class="string">inline</span></span><br><span class="line"><span class="attr">links:</span></span><br><span class="line"><span class="attr">  Title1:</span> <span class="attr">http://example.com</span></span><br><span class="line"><span class="attr">  Title2:</span> <span class="attr">http://example.com</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/Tool/Hexo/NexT侧边栏配置/links.png" alt="links"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/Tool/Hexo/NexT侧边栏配置/links.png" alt="links"></p>
 <h1 id="设置文章目录">设置文章目录</h1>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Table Of Contents in the Sidebar</span></span><br><span class="line"><span class="attr">toc:</span></span><br><span class="line">  <span class="comment"># 是否启用侧边栏文章目录.</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># 是否自动将列表编号添加到TOC.</span></span><br><span class="line"><span class="attr">  number:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># 如果为true，如果标题宽度大于侧边栏宽度，则所有单词将放在下一行.</span></span><br><span class="line"><span class="attr">  wrap:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># 如果为true，将显示帖子中的所有TOC级别，而不是其中的激活部分.</span></span><br><span class="line"><span class="attr">  expand_all:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># 生成的TOC的最大深度. 你可以在一个帖子中通过Front Matter中的`toc_max_depth`设置它.</span></span><br><span class="line"><span class="attr">  max_depth:</span> <span class="number">6</span></span><br></pre></td></tr></table></figure>
 

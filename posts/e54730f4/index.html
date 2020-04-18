@@ -60,12 +60,12 @@
 <meta property="og:site_name" content="wylu">
 <meta property="og:description" content="在如今的互联网环境下，海量数据已随处可见并且还在不断增长，对于如何存储处理海量数据，比较常见的方法有两种：  垂直扩展：通过增加单台服务器的配置，例如使用更强悍的 CPU、更大的内存、更大容量的磁盘，此种方法虽然成本很高，但是实现比较简单，维护起来也比较方便。 水平扩展：通过使用更多配置一般的服务器来共同承担工作负载，此种方法很灵活，可以根据工作负载的大小动态增减服务器的数量，但是实现比较复杂，得">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/Web/mongo/MongoDB分片集群搭建/sharded-cluster-production-architecture.svg">
-<meta property="og:updated_time" content="2020-04-04T08:34:39.270Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/Web/mongo/MongoDB分片集群搭建/sharded-cluster-production-architecture.svg">
+<meta property="og:updated_time" content="2020-04-18T06:10:32.883Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MongoDB分片集群搭建">
 <meta name="twitter:description" content="在如今的互联网环境下，海量数据已随处可见并且还在不断增长，对于如何存储处理海量数据，比较常见的方法有两种：  垂直扩展：通过增加单台服务器的配置，例如使用更强悍的 CPU、更大的内存、更大容量的磁盘，此种方法虽然成本很高，但是实现比较简单，维护起来也比较方便。 水平扩展：通过使用更多配置一般的服务器来共同承担工作负载，此种方法很灵活，可以根据工作负载的大小动态增减服务器的数量，但是实现比较复杂，得">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/Web/mongo/MongoDB分片集群搭建/sharded-cluster-production-architecture.svg">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/Web/mongo/MongoDB分片集群搭建/sharded-cluster-production-architecture.svg">
 
 <link rel="canonical" href="https://wylu.me/posts/e54730f4/">
 
@@ -253,10 +253,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-04-04 16:17:04 / 修改时间：16:34:39" itemprop="dateCreated datePublished" datetime="2020-04-04T16:17:04+08:00">2020-04-04</time>
+              <time title="创建时间：2020-04-04 16:17:04" itemprop="dateCreated datePublished" datetime="2020-04-04T16:17:04+08:00">2020-04-04</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-04-18 14:10:32" itemprop="dateModified" datetime="2020-04-18T14:10:32+08:00">2020-04-18</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -315,7 +321,7 @@
 <p>MongoDB 支持通过分片技术从而进行水平扩展，用以支撑海量数据集和高吞吐量的操作。如果数据集不够大，还是建议您使用 <a href="https://docs.mongodb.com/manual/replication/" rel="external nofollow noopener noreferrer" target="_blank">MongoDB 副本集</a>，因为分片需要处理更多的技术细节，所以在分片环境下其性能可能始终没有副本集性能强。本文通过介绍如何搭建 MongoDB 分片集群以及及一些相关核心概念，可以帮您快速理解 MongoDB 是如何通过分片技术来处理海量数据的。</p>
 <a id="more"></a>
 <h1 id="分片集群组件">分片集群组件</h1>
-<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/Web/mongo/MongoDB分片集群搭建/sharded-cluster-production-architecture.svg" alt="sharded cluster"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/Web/mongo/MongoDB分片集群搭建/sharded-cluster-production-architecture.svg" alt="sharded cluster"></p>
 <p>MongoDB 分片集群（参考官方文档 <a href="https://docs.mongodb.com/manual/sharding/" rel="external nofollow noopener noreferrer" target="_blank">Sharded Cluster</a>）由以下三个组件构成，缺一不可：</p>
 <ul>
 <li>mongos：数据库集群请求的入口，所有的请求都通过 mongos 进行协调，不需要在应用程序添加一个路由选择器，mongos 自己就是一个请求分发中心，它负责把对应的数据请求请求转发到对应的 shard 服务器上。在生产环境通常有多 mongos 作为请求的入口，防止其中一个挂掉所有的 mongodb 请求都没有办法操作。</li>

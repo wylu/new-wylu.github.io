@@ -60,19 +60,19 @@
 <meta property="og:site_name" content="wylu">
 <meta property="og:description" content="本文将简要介绍 shadowsocks 的基本原理，并详细说明如何在 Ubuntu 18.04 下安装使用 shadowsocks 客户端，同时提供了让系统使用 PAC 模式或全局模式的配置方法。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/OS/Linux/Ubuntu-18-04-安装shadowsocks/sslocal-version.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/OS/Linux/Ubuntu-18-04-安装shadowsocks/run-ss.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/OS/Linux/Ubuntu-18-04-安装shadowsocks/PAC-mode.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/OS/Linux/Ubuntu-18-04-安装shadowsocks/pac-file-rules.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/OS/Linux/Ubuntu-18-04-安装shadowsocks/privoxy-listen-address.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/OS/Linux/Ubuntu-18-04-安装shadowsocks/privoxy-forward-socks5t.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/OS/Linux/Ubuntu-18-04-安装shadowsocks/Global-mode-shell-test.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/OS/Linux/Ubuntu-18-04-安装shadowsocks/manual-mode-setting.png">
-<meta property="og:updated_time" content="2020-01-12T09:44:48.649Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu-18-04-安装shadowsocks/sslocal-version.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu-18-04-安装shadowsocks/run-ss.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu-18-04-安装shadowsocks/PAC-mode.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu-18-04-安装shadowsocks/pac-file-rules.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu-18-04-安装shadowsocks/privoxy-listen-address.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu-18-04-安装shadowsocks/privoxy-forward-socks5t.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu-18-04-安装shadowsocks/Global-mode-shell-test.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu-18-04-安装shadowsocks/manual-mode-setting.png">
+<meta property="og:updated_time" content="2020-04-18T06:10:32.871Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu 18.04 安装shadowsocks">
 <meta name="twitter:description" content="本文将简要介绍 shadowsocks 的基本原理，并详细说明如何在 Ubuntu 18.04 下安装使用 shadowsocks 客户端，同时提供了让系统使用 PAC 模式或全局模式的配置方法。">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/OS/Linux/Ubuntu-18-04-安装shadowsocks/sslocal-version.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu-18-04-安装shadowsocks/sslocal-version.png">
 
 <link rel="canonical" href="https://wylu.me/posts/eed37a90/">
 
@@ -268,7 +268,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-01-12 17:44:48" itemprop="dateModified" datetime="2020-01-12T17:44:48+08:00">2020-01-12</time>
+                <time title="修改时间：2020-04-18 14:10:32" itemprop="dateModified" datetime="2020-04-18T14:10:32+08:00">2020-04-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -342,7 +342,7 @@
 <h1 id="查看版本号">查看版本号</h1>
 <p>执行以下命令查看 shadowsocks 的版本</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sslocal --version</span><br></pre></td></tr></table></figure>
-<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/OS/Linux/Ubuntu-18-04-安装shadowsocks/sslocal-version.png" alt="sslocal-version"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu-18-04-安装shadowsocks/sslocal-version.png" alt="sslocal-version"></p>
 <h1 id="配置-shadowsocks-客户端">配置 shadowsocks 客户端</h1>
 <p><a href="https://github.com/shadowsocks/shadowsocks/wiki/Configuration-via-Config-File" rel="external nofollow noopener noreferrer" target="_blank">Configuration via Config File</a> 通过配置文件进行配置</p>
 <p>修改 <code>/etc/shadowsocks/config.json</code> 配置（客户端配置），例如：</p>
@@ -400,14 +400,14 @@
 <h2 id="后台运行">后台运行</h2>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sslocal -c /etc/shadowsocks.json -d start</span><br><span class="line">sslocal -c /etc/shadowsocks.json -d stop</span><br></pre></td></tr></table></figure>
 <p>是否使用 sudo 权限根据具体情况而定</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/OS/Linux/Ubuntu-18-04-安装shadowsocks/run-ss.png" alt="run-ss"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu-18-04-安装shadowsocks/run-ss.png" alt="run-ss"></p>
 <h1 id="shadowsocks-代理模式">shadowsocks 代理模式</h1>
 <p>启动后还不能直接翻墙，因为上面只是启动了代理服务器，但是网络请求并没有经过代理服务器，所以还需要配置代理服务，代理服务可分为部分代理和全局代理。</p>
 <p><strong>特别说明：这里所说的是 shadowsocks 的 PAC 模式和全局模式，另外 shadowsocks 的全局模式并不是整个系统所有软件都进行代理，而只是针对所有浏览器进行的全局代理。</strong></p>
 <ul>
 <li><p>PAC 模式</p>
 <p>PAC 也即代理自动配置 Proxy auto-config，是一种网页浏览器技术，用于定义浏览器该如何自动选择适当的代理服务器来访问一个网址。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/OS/Linux/Ubuntu-18-04-安装shadowsocks/PAC-mode.png" alt="PAC-mode"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu-18-04-安装shadowsocks/PAC-mode.png" alt="PAC-mode"></p>
 <p>PAC 模式会在连接网站的时候读取 PAC 文件的规则，来确定所访问的网站有没有被墙，如果被墙了或者符合规则，那就会使用代理服务器连接网站，而 PAC 列表一般都是从 GFWList 更新的。GFWList 定期会更新被墙的网站，不过一般比较慢。</p></li>
 <li><p>全局模式</p>
 <p>Shadowsocks 的全局模式，是设置系统的代理服务器，使所有的 Http Proxy/Socks5 请求都由代理服务器转发。</p></li>
@@ -458,7 +458,7 @@
 <h1 id="autoproxy.pac-文件分析">autoproxy.pac 文件分析</h1>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> proxy = <span class="string">'SOCKS5 127.0.0.1:1080'</span>;</span><br><span class="line"><span class="keyword">var</span> rules = [</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    用于添加自定义规则</span></span><br><span class="line"><span class="comment">    分析以下的js代码，可以知道rules元素，越靠前的优先级越高；</span></span><br><span class="line"><span class="comment">    即如果在rules[0]中匹配成功，则不再匹配，直接返回选择"直连"或者"走代理"</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    [</span><br><span class="line">        [], </span><br><span class="line">        []</span><br><span class="line">    ], </span><br><span class="line">    [</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        以rules[1]为例进行分析，其它类似；</span></span><br><span class="line"><span class="comment">        同样，在rules[1]中的元素也是越靠前的优先级越高；</span></span><br><span class="line"><span class="comment">        如果在rules[1][0]中匹配成功，则不再匹配，直接返回；</span></span><br><span class="line"><span class="comment">        分析代码可知，当匹配成功时：</span></span><br><span class="line"><span class="comment">            --如果该元素的索引为偶数，则返回字面值'DIRECT'，即选择直连</span></span><br><span class="line"><span class="comment">            --如果该元素的索引为奇数，则返回proxy变量的值，即选择使用代理</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        [],</span><br><span class="line">        []</span><br><span class="line">    ]</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    以上规则如果没有一个匹配成功，根据代码分析，最终将返回字面值'DIRECT'，</span></span><br><span class="line"><span class="comment">    也就是选择直连；这也意味着如果某些URL被墙，而又没有加入到pac规则中，</span></span><br><span class="line"><span class="comment">    最终会以直连的方式访问，因为被墙所以肯定是访问不到的, 这时应该使用全局模式，</span></span><br><span class="line"><span class="comment">    或者在pac中添加规则。</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> lastRule = <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">FindProxyForURL</span>(<span class="params">url, host</span>) </span>&#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    个人认为，如果这里直接返回proxy，应该就等同于全局模式了，</span></span><br><span class="line"><span class="comment">    此时，不管是什么URL，都会走代理</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; rules.length; i++) &#123;</span><br><span class="line">        ret = testHost(host, i);</span><br><span class="line">        <span class="keyword">if</span> (ret != <span class="literal">undefined</span>)</span><br><span class="line">            <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'DIRECT'</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">testHost</span>(<span class="params">host, index</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; rules[index].length; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; rules[index][i].length; j++) &#123;</span><br><span class="line">            lastRule = rules[index][i][j];</span><br><span class="line">            <span class="keyword">if</span> (host == lastRule || host.endsWith(<span class="string">'.'</span> + lastRule))</span><br><span class="line">                <span class="keyword">return</span> i % <span class="number">2</span> == <span class="number">0</span> ? <span class="string">'DIRECT'</span> : proxy;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    lastRule = <span class="string">''</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// REF: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith</span></span><br><span class="line"><span class="keyword">if</span> (!<span class="built_in">String</span>.prototype.endsWith) &#123;</span><br><span class="line">    <span class="built_in">String</span>.prototype.endsWith = <span class="function"><span class="keyword">function</span>(<span class="params">searchString, position</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> subjectString = <span class="keyword">this</span>.toString();</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">typeof</span> position !== <span class="string">'number'</span> || !<span class="built_in">isFinite</span>(position) || <span class="built_in">Math</span>.floor(position) !== position || position &gt; subjectString.length) &#123;</span><br><span class="line">            position = subjectString.length;</span><br><span class="line">        &#125;</span><br><span class="line">        position -= searchString.length;</span><br><span class="line">        <span class="keyword">var</span> lastIndex = subjectString.indexOf(searchString, position);</span><br><span class="line">        <span class="keyword">return</span> lastIndex !== <span class="number">-1</span> &amp;&amp; lastIndex === position;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>理解 pac 文件 rules 的含义后，就可以自行添加一些规则了。比如 PAC 模式下访问不了 Jetbrains 的插件网址 <a href="https://plugins.jetbrains.com" rel="external nofollow noopener noreferrer" target="_blank">https://plugins.jetbrains.com</a>，因为在该 pac 文件中并没有与此 URL 匹配的规则，所以最后会以直连的方式访问，但是该网址已被墙，最终是无法访问的，我们可以把该域名添加到 pac 文件的规则列表中，该规则列表应是一个使用代理的列表，在添加规则后会以走代理的方式访问 Jetbrains 的插件网址。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/OS/Linux/Ubuntu-18-04-安装shadowsocks/pac-file-rules.png" alt="pac-file-rules"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu-18-04-安装shadowsocks/pac-file-rules.png" alt="pac-file-rules"></p>
 <h1 id="配置-ubuntu-使用-global-模式">配置 Ubuntu 使用 Global 模式</h1>
 <p>要实现 Global 模式，需要使用 privoxy，并且配置系统网络代理使用手动模式。</p>
 <p>privoxy 能够实现不同代理之间的切换，使用它可以作为 SOCKS 代理和 HTTP、HTTPS 代理连接的桥梁，它能把所有的 http 请求（包括终端执行的命令，浏览器）转发给 shadowsocks，它就像是一个适配器，将 SOCKS 代理转为 HTTP 代理。</p>
@@ -472,9 +472,9 @@
 </ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/privoxy/config</span><br></pre></td></tr></table></figure>
 <p>找到 <code>#listen-address 127.0.0.1:8118</code>，取消注释，表示 privoxy 监听本机 8118 端口</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/OS/Linux/Ubuntu-18-04-安装shadowsocks/privoxy-listen-address.png" alt="privoxy-listen-address"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu-18-04-安装shadowsocks/privoxy-listen-address.png" alt="privoxy-listen-address"></p>
 <p>找到 <code>#forward-socks5t / 127.0.0.1:9050 .</code>，在下方添加一行 <code>forward-socks5t / 127.0.0.1:1080 .</code>，表示转发请求到本地 1080 端口，而 1080 端口是 shadowsocks 监听的端口</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/OS/Linux/Ubuntu-18-04-安装shadowsocks/privoxy-forward-socks5t.png" alt="privoxy-forward-socks5t"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu-18-04-安装shadowsocks/privoxy-forward-socks5t.png" alt="privoxy-forward-socks5t"></p>
 <ol start="3" type="1">
 <li>修改完后，重启 privoxy</li>
 </ol>
@@ -488,7 +488,7 @@
 <ol start="5" type="1">
 <li>测试</li>
 </ol>
-<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/OS/Linux/Ubuntu-18-04-安装shadowsocks/Global-mode-shell-test.png" alt="Global-mode-shell-test"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu-18-04-安装shadowsocks/Global-mode-shell-test.png" alt="Global-mode-shell-test"></p>
 <h2 id="配置系统网络代理">配置系统网络代理</h2>
 <p>配置完 privoxy 后，终端发起的网络请求也能走 SOCKS5 代理了，但浏览器要使用全局模式还需要配置系统网络代理。</p>
 <p>默认浏览器默认使用系统代理，所以只需配置系统网络代理即可，具体配置过程如下：</p>
@@ -497,7 +497,7 @@
 <li><p>方法选择 <code>Manual</code></p></li>
 <li><p>设置 HTTP、HTTPS 请求由 privoxy 来代理</p></li>
 </ol>
-<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/OS/Linux/Ubuntu-18-04-安装shadowsocks/manual-mode-setting.png" alt="manual-mode-setting"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu-18-04-安装shadowsocks/manual-mode-setting.png" alt="manual-mode-setting"></p>
 <ol start="4" type="1">
 <li>Pac 和 Global 模式切换</li>
 </ol>

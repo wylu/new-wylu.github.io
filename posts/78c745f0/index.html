@@ -60,16 +60,16 @@
 <meta property="og:site_name" content="wylu">
 <meta property="og:description" content="本文记录一些 Hexo 的难点问题及其解决方案。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/Tool/Hexo/Hexo相关问题和优化/source-fold.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/Tool/Hexo/Hexo相关问题和优化/source-unfold.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/Tool/Hexo/Hexo相关问题和优化/posts-classify.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/Tool/Hexo/Hexo相关问题和优化/post-quicksort.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/Tool/Hexo/Hexo相关问题和优化/post-netstat.png">
-<meta property="og:updated_time" content="2020-01-12T09:44:48.653Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/Tool/Hexo/Hexo相关问题和优化/source-fold.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/Tool/Hexo/Hexo相关问题和优化/source-unfold.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/Tool/Hexo/Hexo相关问题和优化/posts-classify.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/Tool/Hexo/Hexo相关问题和优化/post-quicksort.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/Tool/Hexo/Hexo相关问题和优化/post-netstat.png">
+<meta property="og:updated_time" content="2020-04-18T06:10:32.847Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo相关问题和优化">
 <meta name="twitter:description" content="本文记录一些 Hexo 的难点问题及其解决方案。">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/Tool/Hexo/Hexo相关问题和优化/source-fold.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/Tool/Hexo/Hexo相关问题和优化/source-fold.png">
 
 <link rel="canonical" href="https://wylu.me/posts/78c745f0/">
 
@@ -265,7 +265,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-01-12 17:44:48" itemprop="dateModified" datetime="2020-01-12T17:44:48+08:00">2020-01-12</time>
+                <time title="修改时间：2020-04-18 14:10:32" itemprop="dateModified" datetime="2020-04-18T14:10:32+08:00">2020-04-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -383,17 +383,17 @@
 <p>Hexo 默认所有的文章都会放在 <code>source/_posts</code> 文件夹下，当文章越来越多时，将很难管理文章源文件同时也不利于快速查找到想要的文章。</p>
 <p>我个人的做法就是分层分类存放，同时利用上面提到的 abbrlink 来设置 permalink，以确保不管文章源文件如何变换分类、分类层次有多深，生成的静态页面的链接始终对 SEO 友好。</p>
 <p>例如，在 <code>_posts</code> 文件夹，创建了 <code>Algorithm</code> 和 <code>Linux</code> 两个文件夹作为一级分类， <code>Linux</code> 分类下创建了 <code>command</code> 文件夹作为二级分类：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/Tool/Hexo/Hexo相关问题和优化/source-fold.png" alt="source-fold"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/Tool/Hexo/Hexo相关问题和优化/source-unfold.png" alt="source-unfold"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/Tool/Hexo/Hexo相关问题和优化/source-fold.png" alt="source-fold"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/Tool/Hexo/Hexo相关问题和优化/source-unfold.png" alt="source-unfold"></p>
 <p>其中，文章的同名同级的文件夹是它的资源文件夹，存放文章对应的资源，如图片等。</p>
 <p>本地运行测试，查看文章 QuickSort 如下：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/Tool/Hexo/Hexo相关问题和优化/posts-classify.png" alt="posts-classify"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/Tool/Hexo/Hexo相关问题和优化/posts-classify.png" alt="posts-classify"></p>
 <p>不管源文件如何存放，链接始终是 <code>/posts/xxxxxxx/</code> 的形式，另外需要注意 <strong>文章 front-matter 中的 <code>categories</code> 与这里的分类存放没有任何关系</strong> ，如上图中 QuickSort 文章分类于 <code>Algorithm -&gt; Sort</code>，而其 md 文件是直接放在了 Algorithm 目录下。</p>
 <p>如果你想让 URL 直接对应源文件的分类也是可以的，但不推荐这么做，编辑 <code>站点配置文件</code>，修改 permalink 配置如下：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">permalink:</span> <span class="string">posts/:title/</span></span><br></pre></td></tr></table></figure>
 <p>重新生成，测试结果如下，注意 URL 与源文件存放位置的对应关系：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/Tool/Hexo/Hexo相关问题和优化/post-quicksort.png" alt="post-quicksort"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/wylu/source/_posts/Tool/Hexo/Hexo相关问题和优化/post-netstat.png" alt="post-netstat"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/Tool/Hexo/Hexo相关问题和优化/post-quicksort.png" alt="post-quicksort"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/Tool/Hexo/Hexo相关问题和优化/post-netstat.png" alt="post-netstat"></p>
 <h1 id="英文引号变成中文引号">英文引号变成中文引号</h1>
 <p>引号显示异常，英文单引号 ' 双引号 "，都显示成中文单引号’ 双引号”。</p>
 <h2 id="方法一">方法一</h2>

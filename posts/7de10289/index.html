@@ -58,14 +58,14 @@
 <meta property="og:url" content="https://wylu.me/posts/7de10289/index.html">
 <meta property="og:site_name" content="wylu">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu下安装拳皇97/kof97.jpeg">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu下安装拳皇97/mame.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu下安装拳皇97/download-kof97.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu下安装拳皇97/run-kof97.png">
-<meta property="og:updated_time" content="2020-04-18T06:10:32.871Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Ubuntu/Ubuntu下安装拳皇97/kof97.jpeg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Ubuntu/Ubuntu下安装拳皇97/mame.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Ubuntu/Ubuntu下安装拳皇97/download-kof97.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Ubuntu/Ubuntu下安装拳皇97/run-kof97.png">
+<meta property="og:updated_time" content="2020-05-16T10:36:19.262Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu下安装拳皇97">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu下安装拳皇97/kof97.jpeg">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Ubuntu/Ubuntu下安装拳皇97/kof97.jpeg">
 
 <link rel="canonical" href="https://wylu.me/posts/7de10289/">
 
@@ -155,17 +155,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">47</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">48</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">27</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">29</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">66</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">67</span></a>
 
   </li>
         <li class="menu-item menu-item-guestbook">
@@ -261,7 +261,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-18 14:10:32" itemprop="dateModified" datetime="2020-04-18T14:10:32+08:00">2020-04-18</time>
+                <time title="修改时间：2020-05-16 18:36:19" itemprop="dateModified" datetime="2020-05-16T18:36:19+08:00">2020-05-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -275,8 +275,8 @@
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OS/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
+                  <a href="/categories/OS/Ubuntu/" itemprop="url" rel="index">
+                    <span itemprop="name">Ubuntu</span>
                   </a>
                 </span>
             </span>
@@ -313,7 +313,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu下安装拳皇97/kof97.jpeg" alt="kof97"></p>
+        <p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Ubuntu/Ubuntu下安装拳皇97/kof97.jpeg" alt="kof97"></p>
 <a id="more"></a>
 <h1 id="系统环境">系统环境</h1>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> lsb_release -a</span></span><br><span class="line">No LSB modules are available.</span><br><span class="line">Distributor ID:	Ubuntu</span><br><span class="line">Description:	Ubuntu 18.04.3 LTS</span><br><span class="line">Release:	18.04</span><br><span class="line">Codename:	bionic</span><br></pre></td></tr></table></figure>
@@ -323,12 +323,12 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt install mame</span></span><br></pre></td></tr></table></figure>
 <h1 id="测试-mame-是否安装成功">测试 MAME 是否安装成功</h1>
 <p>执行 <code>mame</code> 命令启动模拟器，如果启动后界面如下，说明模拟器安装成功，按 <code>ESC</code> 键可退出程序。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu下安装拳皇97/mame.png" alt="mame"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Ubuntu/Ubuntu下安装拳皇97/mame.png" alt="mame"></p>
 <h1 id="下载-kof97.zip-rom">下载 kof97.zip rom</h1>
 <p>因为大多数游戏数据都是存储于只读存储器，渐渐地不管这些文件原先是被存储于怎样的介质，读取后的文件都通称为 ROM 映像档或 ROM。在要运行某一特定的游戏时，MAME 就需要这些读取自原始街机的整组文件，这一整组的文件称之为“ROM 集合”，但是碍于法规 MAME 不会自带这些文件。</p>
 <p>所以想要在 MAME 中玩拳皇97还需要下载游戏的 rom 包，MAME 支持的游戏 rom 包可以到 <a href="https://www.planetemu.net/roms/mame-roms" rel="external nofollow noopener noreferrer" target="_blank">https://www.planetemu.net/roms/mame-roms</a> 下载。</p>
 <p>这是拳皇97的 rom：<a href="https://www.planetemu.net/rom/mame-roms/kof97" rel="external nofollow noopener noreferrer" target="_blank">kof97.zip</a></p>
-<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu下安装拳皇97/download-kof97.png" alt="download-kof97"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Ubuntu/Ubuntu下安装拳皇97/download-kof97.png" alt="download-kof97"></p>
 <p>拳皇97风云再起的 rom: <a href="https://www.planetemu.net/rom/mame-roms/kof97pls" rel="external nofollow noopener noreferrer" target="_blank">kof97pls.zip</a>，该 rom 依赖于 kof97.zip</p>
 <h1 id="下载-neogeo.zip">下载 neogeo.zip</h1>
 <p>neogeo.zip 是玩所有 NEOGEO 公司出品的游戏所必需的 BIOS 文件，需要和其它游戏 ROM 一起放在模拟器的 roms 文件夹下。</p>
@@ -338,12 +338,12 @@
 <p>使用 apt 安装 MAME 时，默认会将模拟器安装在 <code>/usr/share/games/mame</code>，所以 MAME 的 roms 目录在 <code>/usr/share/games/mame/roms</code>，将 kof97.zip 和 neogeo.zip 都拷贝到 roms 目录下。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> wylu @ X555LJ <span class="keyword">in</span> /usr/share/games/mame/roms [23:28:54] </span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo cp ~/Downloads/kof97.zip . </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> wylu @ X555LJ <span class="keyword">in</span> /usr/share/games/mame/roms [23:29:54] </span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo cp ~/Downloads/neogeo.zip .</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> wylu @ X555LJ <span class="keyword">in</span> /usr/share/games/mame/roms [23:30:11] </span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ll</span></span><br><span class="line">total 30M</span><br><span class="line">-rw-r--r-- 1 root root  28M Feb  2 23:29 kof97.zip</span><br><span class="line">-rw-r--r-- 1 root root 1.7M Feb  2 23:30 neogeo.zip</span><br></pre></td></tr></table></figure>
 <h1 id="验证-rom-是否正确可用">验证 rom 是否正确可用</h1>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mame -verifyroms kof97    </span></span><br><span class="line">romset kof97 [neogeo] is good</span><br><span class="line">1 romsets found, 1 were OK.</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mame -verifyroms kof97</span></span><br><span class="line">romset kof97 [neogeo] is good</span><br><span class="line">1 romsets found, 1 were OK.</span><br></pre></td></tr></table></figure>
 <p>验证成功，如果提示你的 neogeo.zip 缺少文件导致无法运行，请尝试获取最新的 neogeo.zip 文件然后重试。</p>
 <h1 id="运行游戏">运行游戏</h1>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mame kof97</span></span><br></pre></td></tr></table></figure>
 <p>执行以上命令即可启动游戏，默认 MAME 运行时是全屏，使用组合键 <code>Alt + Enter</code> 可切换成窗口模式；按 <code>p</code> 键暂停游戏并释放鼠标；按 <code>Tab</code> 键可进行相应的设置，按 <code>Esc</code> 退出 MAME。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu下安装拳皇97/run-kof97.png" alt="run-kof97"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Ubuntu/Ubuntu下安装拳皇97/run-kof97.png" alt="run-kof97"></p>
 <h1 id="配置视图长宽比aspect-ratio">配置视图长宽比（Aspect Ratio）</h1>
 <p>如果你成功运行了 kof97，并尝试进行设置，你会发现视图的长宽比始终为 4:3，且无法调整，导致整个视图看起来非常窄，为了能够调整长宽比，我查阅了许多资料，后来发现一个帖子，它基本上解决了我遇到的问题：</p>
 <p><a href="http://forum.arcadecontrols.com/index.php?topic=154130.0" rel="external nofollow noopener noreferrer" target="_blank">Correct Aspect Ratio for vertical games on 16:9 screens??</a></p>
@@ -477,20 +477,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">66</span>
+          <span class="site-state-item-count">67</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-count">29</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">47</span>
+        <span class="site-state-item-count">48</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

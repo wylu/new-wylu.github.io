@@ -60,12 +60,12 @@
 <meta property="og:site_name" content="wylu">
 <meta property="og:description" content="imwheel 是一组命令工具可以用来调节鼠标滚轮的行为，修改滚轮速度。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu-16-04-设置imwheel开机启动/set-imwheel.png">
-<meta property="og:updated_time" content="2020-04-18T06:10:32.875Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Ubuntu/Ubuntu-16-04-设置imwheel开机启动/set-imwheel.png">
+<meta property="og:updated_time" content="2020-05-16T10:35:07.102Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu 16.04 设置imwheel开机启动">
 <meta name="twitter:description" content="imwheel 是一组命令工具可以用来调节鼠标滚轮的行为，修改滚轮速度。">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu-16-04-设置imwheel开机启动/set-imwheel.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Ubuntu/Ubuntu-16-04-设置imwheel开机启动/set-imwheel.png">
 
 <link rel="canonical" href="https://wylu.me/posts/a4104dc1/">
 
@@ -155,17 +155,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">47</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">48</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">27</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">29</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">66</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">67</span></a>
 
   </li>
         <li class="menu-item menu-item-guestbook">
@@ -261,7 +261,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-18 14:10:32" itemprop="dateModified" datetime="2020-04-18T14:10:32+08:00">2020-04-18</time>
+                <time title="修改时间：2020-05-16 18:35:07" itemprop="dateModified" datetime="2020-05-16T18:35:07+08:00">2020-05-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -275,8 +275,8 @@
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OS/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
+                  <a href="/categories/OS/Ubuntu/" itemprop="url" rel="index">
+                    <span itemprop="name">Ubuntu</span>
                   </a>
                 </span>
             </span>
@@ -326,7 +326,7 @@
 <li>第二行和第三行中的 "2" 代表滚动的行数，可以根据需要来修改这个配置。</li>
 <li>首行中 <code>".*"</code> 用来指定在哪些应用中生效，<code>".*"</code> 表示全部应用生效，可以执行 "man imwheel" 查看更多帮助信息。</li>
 <li>第四行和第五行可以让鼠标支持 <code>左Ctrl+上下滚动</code> (比如在浏览器中支持放大)</li>
-<li>第六行和第七行可以让鼠标支持 <code>左Shift+上下滚动</code>(不同应用有不同的作用)，实测似乎并没有什么卵用。</li>
+<li>第六行和第七行可以让鼠标支持 <code>左Shift+上下滚动</code> (不同应用有不同的作用)，实测似乎并没有什么卵用。</li>
 <li>最后两行用来开启鼠标侧键功能。</li>
 </ul>
 <h1 id="启动运行">启动运行</h1>
@@ -340,13 +340,14 @@
 <p>试过在 rc.local 中执行 <code>nohup /usr/bin/imwheel &amp;</code>，排查该命令确实在开机后被执行，但是 <code>ps</code> 却看不到该进程，没找到具体原因。</p>
 <p>实测 Ubuntu 16.04 简单有效的方法：</p>
 <ul>
-<li><p>执行命令 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gnome-session-properties</span><br></pre></td></tr></table></figure></p></li>
+<li><p>执行命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gnome-session-properties</span><br></pre></td></tr></table></figure></li>
 <li><p>弹出窗口为"启动应用程序首选项"</p></li>
 <li><p>点击右侧添加</p></li>
 <li><p>输入描述和软件路径</p></li>
 <li><p>编辑完毕点击保存</p></li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Linux/Ubuntu-16-04-设置imwheel开机启动/set-imwheel.png" alt="set-imwheel"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wylu/cdn/post/OS/Ubuntu/Ubuntu-16-04-设置imwheel开机启动/set-imwheel.png" alt="set-imwheel"></p>
 <h1 id="references">References</h1>
 <p><a href="http://www.linuxdown.net/install/soft/2016/0314/5034.html" rel="external nofollow noopener noreferrer" target="_blank">http://www.linuxdown.net/install/soft/2016/0314/5034.html</a></p>
 <p><a href="https://blog.csdn.net/u010820857/article/details/82776382" rel="external nofollow noopener noreferrer" target="_blank">https://blog.csdn.net/u010820857/article/details/82776382</a></p>
@@ -466,20 +467,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">66</span>
+          <span class="site-state-item-count">67</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-count">29</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">47</span>
+        <span class="site-state-item-count">48</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

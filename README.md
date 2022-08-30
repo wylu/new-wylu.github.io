@@ -1,6 +1,3 @@
-# Hexo NexT Blog
+# wylu blog
 
-Home Page: [wylu.github.io](https://wylu.github.io/)
-
-Share Technology. 
-Record Life.
+[https:wylu.github.io](https://wylu.github.io/)

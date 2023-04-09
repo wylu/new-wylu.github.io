@@ -29,14 +29,14 @@
   var url = purl();
   if (url.attr('host') == 'wylu.github.io') {
     var old_url = url.attr('source');
-    var new_url = old_url.replace('wylu.github.io', 'wylu.me');
+    var new_url = old_url.replace('wylu.github.io', 'www.wylu.me');
     window.location.replace(new_url);
   } else if (url.attr('host') == 'www.wylu.github.io') {
     var old_url = url.attr('source');
-    var new_url = old_url.replace('www.wylu.github.io', 'wylu.me');
+    var new_url = old_url.replace('www.wylu.github.io', 'www.wylu.me');
     window.location.replace(new_url);
   } else {
-    window.location.href = 'https://wylu.me';
+    window.location.href = 'https://www.wylu.me';
   }
 </script>
 
